@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Start : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Start : MonoBehaviour
     {
         if (canvas != null) 
         {
+           // SceneManager.LoadScene(1);
             canvas.SetActive(false);
             canvas2.SetActive(true);
         }
