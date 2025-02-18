@@ -8,7 +8,7 @@ public class JagandeBoll : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //johans script
     }
 
     // Update is called once per frame
