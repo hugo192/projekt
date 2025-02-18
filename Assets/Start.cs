@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class Start : MonoBehaviour
 {
-    [SerializeField] GameObject canvas;
+    [SerializeField] GameObject canvas;//hämtar båda canvas i en Array
     [SerializeField] GameObject canvas2;
 
-    public void Close()
+    public void Close()//funktionen gör så att startskärmen (canvas) blir osynlig och canvas2 blir synlig
     {
         if (canvas != null) 
         {
@@ -17,7 +17,7 @@ public class Start : MonoBehaviour
             canvas.SetActive(false);
             canvas2.SetActive(true);
         }
-        else
+        else //om inte det funkar 
         {
             Debug.LogWarning("Canvas is not assigned in the inspector");
         }

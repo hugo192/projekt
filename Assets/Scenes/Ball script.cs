@@ -15,7 +15,7 @@ public class Ballscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.G))//Om man trycker på "G" flyttar bollen sig till en eller flera punkter
         {
             current++;
             if (current >= Ball.Length)
