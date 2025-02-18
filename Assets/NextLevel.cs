@@ -18,7 +18,7 @@ public class NextLevel : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D col)//Om man colliderar med objektet teleporteras man till nästa level
     {
         SceneManager.LoadScene(sceneIndex);
     }

@@ -5,17 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class MovingCircle : MonoBehaviour
 {
-    [SerializeField] Vector3[] punkt;
+    [SerializeField] Vector3[] punkt; //En array som samlar ihop tre punkter
     int current = 0;
     bool movingForward = true;
 
-    void Update() 
+    void Update()
     {
-        if (punkt.Length < 2) return;
+        if (punkt.Length < 2) return;//Kontroll av antalet punkter
 
-        transform.position = Vector3.Lerp(transform.position, punkt[current], Time.deltaTime * 25); //array 
+        transform.position = Vector3.Lerp(transform.position, punkt[current], Time.deltaTime * 25);//Interpolerad rörelse
 
-        if (Vector3.Distance(transform.position, punkt[current]) < 0.1f)
+        if (Vector3.Distance(transform.position, punkt[current]) < 0.1f) //Kontroll av när målpunkten är nådd
         {
             if (movingForward)
             {
@@ -38,7 +38,7 @@ public class MovingCircle : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) //funktion
+    private void OnTriggerEnter2D(Collider2D collision)//Om spelaren colliderar med en spik startar spelet om
     {
         if (collision.CompareTag("Player"))
         {
