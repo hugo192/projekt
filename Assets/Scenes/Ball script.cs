@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ballscript : MonoBehaviour
+public class Ballscript : MonoBehaviour 
 {
-    [SerializeField] Vector3[] Ball;
+    [SerializeField] Vector3[] Ball; //array som samlar ihop alla punkter - Hugo
     int current;
-    // Start is called before the first frame update
+    
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        for (int i = 0; i < Ball.Length; i++)
+        for (int i = 0; i < Ball.Length; i++)//vilka punkter bollen åker till
         {
             if (Vector3.Distance(transform.position, Ball[i]) < 1)
             {
@@ -23,9 +23,10 @@ public class Ballscript : MonoBehaviour
                 if (current >= Ball.Length)
                 {
                     current = 0;
+                    
                 }
             }
         }
-        transform.position = Ball[current];
+        transform.position += (Ball[current]-transform.position).normalized * 3 * Time.deltaTime; //hastigheten för hur snabbt bollen rör sig - Hugo
     }
 }
