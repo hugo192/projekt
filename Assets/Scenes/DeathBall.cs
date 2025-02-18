@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+    //johan och hugos
     // Start is called before the first frame update
     void Start()
     {
