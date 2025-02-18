@@ -9,11 +9,11 @@ public class MovingCircle : MonoBehaviour
     int current = 0;
     bool movingForward = true;
 
-    void Update()
+    void Update() 
     {
         if (punkt.Length < 2) return;
 
-        transform.position = Vector3.Lerp(transform.position, punkt[current], Time.deltaTime * 25);
+        transform.position = Vector3.Lerp(transform.position, punkt[current], Time.deltaTime * 25); //array 
 
         if (Vector3.Distance(transform.position, punkt[current]) < 0.1f)
         {
@@ -38,7 +38,7 @@ public class MovingCircle : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) //funktion
     {
         if (collision.CompareTag("Player"))
         {
