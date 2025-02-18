@@ -19,7 +19,7 @@ public class JagandeBoll : MonoBehaviour
         {
             if (objectsNearby[i].transform.CompareTag("Player"))
             {
-                transform.position += (objectsNearby[i].transform.position - transform.position).normalized * 5 * Time.deltaTime;
+                transform.position += (objectsNearby[i].transform.position - transform.position).normalized * 2 * Time.deltaTime;
             }
         }
     }
